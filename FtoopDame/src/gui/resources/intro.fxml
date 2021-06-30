@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.*?>
+
+<VBox fx:controller="controllers.IntroController" prefWidth="700" styleClass="vbox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0"  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="center" text="Dame" wrapText="true">
+         <font>
+            <Font name="Verdana Bold" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="193.0" fitWidth="217.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@dame.png" />
+         </image>
+      </ImageView>
+      <Label alignment="center" style="-fx-text-fill: #3F4D59;" text="Modus">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox prefWidth="250.0" value="Spieler vs. Computer" fx:id="mode">
+	      <items>
+		     <FXCollections fx:factory="observableArrayList">
+		         <String fx:value="Computer vs. Computer" />
+		         <String fx:value="Spieler vs. Computer" />
+		         <String fx:value="Spieler vs. Spieler" />
+		     </FXCollections>
+		 </items>
+      </ChoiceBox>
+      <Label alignment="center" text="Aufstellung">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox prefWidth="250.0" style="-fx-font-size: 16;" value="Weiss gegen Schwarz" fx:id="arrangement">
+       <items>
+		     <FXCollections fx:factory="observableArrayList">
+		         <String fx:value="Weiss gegen Schwarz" />
+		         <String fx:value="Schwarz gegen Weiss" />
+		     </FXCollections>
+		 </items>
+		</ChoiceBox>
+      <Label alignment="center" text="Schwierigskeitsgrad">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </Label>
+      <Slider fx:id="difficulty" blockIncrement="1.0" minorTickCount="0" min="1.0" majorTickUnit="1.0" max="5.0" nodeOrientation="LEFT_TO_RIGHT" snapToTicks="true" prefHeight="32.0" maxWidth="250.0" showTickLabels="true" showTickMarks="true" value="3.0">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="MOVE" />
+         </cursor>
+      </Slider>
+      <Button mnemonicParsing="false" prefWidth="250.0" text="Spiel starten" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" onAction="#initGame">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </Button>
+      <Label alignment="center" text="Erstellt von Alejandro Laneri, Ramona Koksa, Nicola Lorenz">
+         <font>
+            <Font name="Verdana" size="10.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>

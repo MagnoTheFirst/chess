@@ -1,0 +1,25 @@
+
+.vbox{
+    -fx-background-color: #F1F2F4; -fx-padding: 40;
+}
+.label{
+    -fx-text-fill: #3F4D59;
+}
+
+
+.choice-box{
+    -fx-font-size: 16; 
+    -fx-background-color: #3F4D59; 
+    -fx-control-inner-background: #3F4D59; 
+    -fx-base: #F1F2F4; 
+    -fx-control-inner-text-fill: #F1F2F4;
+}
+
+
+.choice-box .label{
+	-fx-text-fill: #F1F2F4;
+}
+
+.button{
+	-fx-background-color: #3F4D59; -fx-text-fill: #F1F2F4;
+}
